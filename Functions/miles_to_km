@@ -1,0 +1,10 @@
+def convert_distance(miles):
+    km = miles * 1.6
+    print("Distance in kilometers is: "+ str(km))
+    print("The round trip distance in kilometers is: "+str(km*2))
+
+convert_distance(55)
+
+#Output
+# Distance in kilometers is: 88.0
+# The round trip distance in kilometers is: 176.0

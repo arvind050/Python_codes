@@ -1,0 +1,29 @@
+
+# Checking whether a given number is a prime number or not
+def prime_number(n):
+    x = 2
+    while 2 <= x < n:
+        if n % x == 0:
+            return 'Not prime'
+            break
+        x = x + 1
+    return 'is prime'
+
+print(prime_number(2))
+print(prime_number(27))
+print(prime_number(25))
+print(prime_number(11))
+print(prime_number(13))
+print(prime_number(23))
+print(prime_number(100000))
+print(prime_number(14400))
+
+'''Output
+is prime
+Not prime
+Not prime
+is prime
+is prime
+is prime
+Not prime
+Not prime'''

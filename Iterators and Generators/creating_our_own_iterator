@@ -1,0 +1,23 @@
+# Creating our own iterator 
+
+class PrimeSquares:
+
+    i = 1
+
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if self.i <= 10:
+            val = self.i**2
+            self.i += 1
+            return val
+        else:
+            raise StopIteration
+
+
+squares = PrimeSquares()
+print(squares.__next__())
+
+for i in squares:
+    print(i)

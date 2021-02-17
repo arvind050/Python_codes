@@ -1,0 +1,19 @@
+#Selection sort with min(),max and index() methods.
+
+list = [9,2,3,45,10,47,0]
+for i in range(len(list)):
+    min_val = min(list[i:])
+    min_index = list.index(min_val)
+    temp = list[i]
+    list[i]=list[min_index]
+    list[min_index] = temp
+print(list)
+
+list = [9,2,3,45,10,47,0]
+for i in range(len(list)):
+    max_val = max(list[i:])
+    max_index = list.index(max_val)
+    temp = list[i]
+    list[i]=list[max_index]
+    list[max_index] = temp
+print(list)

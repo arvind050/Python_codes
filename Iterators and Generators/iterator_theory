@@ -1,0 +1,12 @@
+'''what is an iterator?
+Iterator is an object which can be iterated upon and which implement the iterator protocol which are __iter__ and __next__
+methods on iterables(list,tuple,set etc)
+
+iterators vs iterables
+ 
+iterator is an object which will give only one value at a time but iterables give all the values at once
+iterator is derived from iterable using a function or method name __iter__
+
+the __next__ method
+
+the next method is used on the iterator object to fetch the elements of iterator object one by one.'''

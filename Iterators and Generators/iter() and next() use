@@ -1,0 +1,11 @@
+list1 = [1,2,3,4] # this is an iterable
+
+# converting the iterable list1 into an iterator
+
+it = list1.__iter__()
+it = iter(list1)
+
+# printing the element of iterator using next method or function
+
+print(it.__next__())
+print(next(it))

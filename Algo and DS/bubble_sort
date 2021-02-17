@@ -1,0 +1,13 @@
+# bubble sort
+
+def bubble_sort(nums):
+    for i in range(len(nums)-1,0,-1):
+        for j in range(i):
+            if nums[j] > nums[j+1]:
+                nums[j],nums[j+1] = nums[j+1],nums[j]
+            else:
+                continue
+
+a = [5,3,8,1,4,9]
+bubble_sort(a)
+print(a)

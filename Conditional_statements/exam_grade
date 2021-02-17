@@ -1,0 +1,17 @@
+'''Students in a class receive their grades as Pass/Fail. Scores of 60 or more (out of 100) mean that the grade 
+is "Pass". For lower scores, the grade is "Fail". In addition, scores above 95 (not included) are graded as 
+"Top Score". Fill in this function so that it returns the proper grade.
+'''
+
+def exam_grade(marks_percentage):
+    if 60 <= marks_percentage <= 95:
+        return 'Pass'
+    elif marks_percentage > 95:
+        return 'Top Score'
+    return 'Fail'
+
+print(exam_grade(65)) # Should be Pass
+print(exam_grade(55)) # Should be Fail
+print(exam_grade(60)) # Should be Pass
+print(exam_grade(95)) # Should be Pass
+print(exam_grade(96)) # Should be Top Score

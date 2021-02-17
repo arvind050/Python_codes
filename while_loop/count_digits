@@ -1,0 +1,38 @@
+'''WAP that returns how many digits the number has. For example: 25 has 2 digits and 144 has 3 digits.'''
+
+def count_digits(n):
+    count = 0
+    if n == 0:
+        count = 1
+    while n > 0:
+        n = n // 10
+        count = count + 1
+    return 'Number of digits in the number is: ' + str(count)
+    
+    
+print(count_digits(21012))
+print(count_digits(0))
+
+# Output
+# Number of digits in the number is: 5
+# Number of digits in the number is: 1
+
+# Method 2
+
+def count_digits(n):
+    n = str(n)
+    digits = len(n)
+    return digits
+
+print(count_digits(123654))
+
+
+# Method 3
+
+def count_digits(n):
+	n = str(n)
+	count = 0
+	for i in n:
+		count += 1
+	return count
+		

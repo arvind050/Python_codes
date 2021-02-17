@@ -1,0 +1,22 @@
+import threading as th
+import time
+
+start = time.perf_counter()
+
+def multitask(seconds):
+    print(f'Sleep for {seconds} second')
+    time.sleep(seconds)
+    
+    print('Done with sleeping')
+threads = []
+for _ in range(10):
+    t = th.Thread(target= multitask,args = [1.5])
+    t.start()
+    threads.append(t)
+
+for thread in threads:
+    thread.join()
+
+
+end = time.perf_counter()
+print(f'Time taken is: {round(end-start,2)}')

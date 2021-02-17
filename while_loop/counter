@@ -1,0 +1,31 @@
+'''The counter function counts down from start to stop when start is bigger than stop, 
+and counts up from start to stop otherwise.'''
+
+def counter(start,end):
+    if start > end:
+        string = "Counting down: "
+        while start >= end:
+            string += str(start)
+            if start > end:
+                string += ","
+            start = start - 1
+
+    else:
+        string = "Counting Up: "
+        while start <= end:
+            string += str(start)
+            if start < end:
+                string += ","
+            start = start + 1
+    return string
+
+
+print(counter(5,1))
+print(counter(1,10))
+print(counter(5,5))
+
+'''Output
+Counting down: 5,4,3,2,1
+Counting Up: 1,2,3,4,5,6,7,8,9,10
+Counting Up: 5
+'''

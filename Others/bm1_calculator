@@ -1,0 +1,28 @@
+name1 = 'Arvind'
+weight_kg1 = 95
+height_m1 = 1.7
+
+name2 = 'Arvind\'s wife'
+weight_kg2 = 60
+height_m2 = 1.6
+
+name3 = 'Arvind\'s daughter'
+weight_kg3 = 6
+height_m3 = 1
+
+def bmi_calculator(name,weight_kg,height_m):
+    res = weight_kg/height_m**2
+    print('BMI of {} is {}'.format(name,res))
+    if res > 24:
+        return "{} is overweight".format(name)
+    else:
+        return "{} is not overweight".format(name)
+
+res1 = bmi_calculator(name1,weight_kg1,height_m1)
+res2 = bmi_calculator(name2,weight_kg2,height_m2)
+res3 = bmi_calculator(name3,weight_kg3,height_m3)
+
+
+print(res1)
+print(res2)
+print(res3)

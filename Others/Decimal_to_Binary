@@ -1,0 +1,21 @@
+
+# Decimal to Binary conversion
+
+def dec_to_bin(n):
+    string = ""
+    while n > 0:
+        string = str(n%2) + string
+        n = n//2
+    return string
+
+print(dec_to_bin(10))
+
+                          OR
+						  
+def dec_to_bin(n):
+    string = ""
+    while n > 0:
+        string = str(n%2) + string
+        n = n // 2
+    return string
+    

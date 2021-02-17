@@ -1,0 +1,16 @@
+'''The add_prices function returns the total price of all of the groceries in the dictionary'''
+	
+def add_prices(dict):
+	sum = 0
+	for keys in dict:
+		sum = sum + dict[keys]
+	return "{:.2f}".format(sum)
+		
+
+	
+
+groceries = {"bananas": 1.56, "apples": 2.50, "oranges": 0.99, "bread": 4.59, 
+	"coffee": 6.99, "milk": 3.39, "eggs": 2.98, "cheese": 5.44}		
+print(add_prices(groceries))
+
+# Output = 28.44

@@ -1,0 +1,39 @@
+class Elevator:
+
+    def __init__(self,bottom,top,current):
+        self.bottom = bottom
+        self.top = top
+        self.current = current
+
+    def up(self): # it takes the elevator up by 1 floor
+        if self.current < self.top:
+            self.current += 1
+    
+    def down(self): # it takes the elevator down by 1 floor
+        if self.current > self.bottom:
+            self.current -= 1
+
+    def go_to(self,floor): # it takes the elevator to the given floor
+        self.current = floor
+         
+ele1 = Elevator(-1,10,0)
+#print(ele1.current)
+'''ele1.up()
+print(ele1.current)
+ele1.down()
+print(ele1.current)
+ele1.go_to(10)
+print(ele1.current)'''
+
+ele1.go_to(10)
+ele1.up()
+ele1.up()
+ele1.down()
+print(ele1.current)
+
+ele1.go_to(-1)
+ele1.down()
+ele1.down()
+ele1.up()
+ele1.up()
+print(ele1.current)

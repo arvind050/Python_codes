@@ -1,0 +1,21 @@
+'''WAP to check whether a number is power of 2'''
+
+def is_power_of_two(n):
+    while n % 2 == 0 and n != 0:
+        n = n/2
+    if n == 1:
+        message = "The number is power of two"
+    else:
+        message = "The number is NOT power of two"
+    return message
+
+print(is_power_of_two(0))
+print(is_power_of_two(1)) 
+print(is_power_of_two(8))
+print(is_power_of_two(9)) 
+
+'''Output
+The number is NOT power of two
+The number is power of two
+The number is power of two
+The number is NOT power of two'''

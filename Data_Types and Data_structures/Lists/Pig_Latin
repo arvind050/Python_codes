@@ -1,0 +1,14 @@
+'''Let's create a function that turns text into pig latin: a simple text transformation that modifies each word 
+moving the first character to the end and appending "ay" to the end. For example, python ends up as ythonpay.'''
+
+def pig_latin(text):
+    new_text = ''
+    text.strip()
+    text = text.split()
+    for i in text:
+        i = i[1:] + i[0] + 'ay'
+        new_text = new_text + i + " "
+    return new_text
+
+print(pig_latin("hello how are you")) # Should be "ellohay owhay reaay ouyay"
+print(pig_latin("programming in python is fun")) # Should be "rogrammingpay niay ythonpay siay unfay"

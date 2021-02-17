@@ -1,0 +1,20 @@
+'''Complete the script by filling in the missing parts. The function receives a name, then returns a greeting based 
+on whether or not that name is "Taylor".'''
+
+def greeting(name):
+    if name == 'Taylor':
+        print('Welcome! Taylor' + '\n' + 'How are you?' )
+    else:
+        print('Hey ' + name)
+    
+ 
+greeting('Mike')
+greeting('Taylor')
+greeting('taylor')
+
+'''Output
+Hey Mike
+Welcome! Taylor
+How are you?
+Hey taylor
+'''

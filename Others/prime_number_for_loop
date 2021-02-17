@@ -1,0 +1,23 @@
+# Checking a number is prime or not using for loop
+
+def prime_number(n):
+    for i in range(2,n):
+        if n % i == 0:
+            return 'Not prime'
+            break
+    return 'is prime'
+
+print(prime_number(2))
+print(prime_number(10000))
+print(prime_number(23))
+print(prime_number(255))
+print(prime_number(17))
+print(prime_number(256))
+
+'''Output
+is prime
+Not prime
+is prime
+Not prime
+is prime
+Not prime'''

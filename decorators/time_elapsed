@@ -1,0 +1,22 @@
+from time import time
+
+def time_taken(func):
+    def time_e(*args,**kwargs):
+        start = time()
+        print('start time:',start)
+        res = func(*args,**kwargs)
+        end = time()
+        print('end time is:',end)
+        
+        print('elapsed time is {}'.format(end-start))
+        return res
+    return time_e
+
+@time_taken   
+def any(n):
+    sum = 0
+    for i in range(n+1):
+        sum += i
+    return sum
+
+print(any(200))

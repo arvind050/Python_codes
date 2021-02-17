@@ -1,0 +1,51 @@
+'''1)Wap to create a nested array with info:
+
+Enter student full name, age , class:
+Enter student full name, age , class:
+Enter student full name, age , class:
+Enter student full name, age , class:
+Enter student full name, age , class:
+
+o/p
+
+Total students :5
+Student First names in sorted order
+Students Last name revese word
+sum of age of students'''
+
+std1_name , std1_age , std1_class = input('Enter your name: ') , int(input('Enter your age: ')) , int(input('Enter your class: '))
+std2_name , std2_age , std2_class = input('Enter your name: ') , int(input('Enter your age: ')) , int(input('Enter your class: '))
+std3_name , std3_age , std3_class = input('Enter your name: ') , int(input('Enter your age: ')) , int(input('Enter your class: '))
+std4_name , std4_age , std4_class = input('Enter your name: ') , int(input('Enter your age: ')) , int(input('Enter your class: '))
+std5_name , std5_age , std5_class = input('Enter your name: ') , int(input('Enter your age: ')) , int(input('Enter your class: '))
+
+std1 = [std1_name,std1_age,std1_class]
+std2 = [std2_name,std2_age,std2_class]
+std3 = [std3_name,std3_age,std3_class]
+std4 = [std4_name,std4_age,std4_class]
+std5 = [std5_name,std5_age,std5_class]
+
+student_info = [std1,std2,std3,std4,std5]
+print(student_info)
+
+print("Total students: {}".format(len(student_info)))
+
+first_name = []
+last_name = []
+for std in student_info:
+    full_name = std[0].split()
+    first_name.append(full_name[0])
+    last_name.append(full_name[1])
+first_name.sort()    
+reverse_last_name = []
+for name in last_name:
+    reverse_last_name.append(name[::-1])
+
+print("Sorted First name List",first_name)
+print("Reverse last name list",reverse_last_name) 
+
+sum = 0
+for std in student_info:
+    sum = sum + std[2]
+print("Sum of ages of all students is: "+str(sum))
+

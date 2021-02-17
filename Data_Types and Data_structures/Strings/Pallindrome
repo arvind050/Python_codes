@@ -1,0 +1,45 @@
+'''Questions on Strings Datatype
+
+1) The is_palindrome function checks if a string is a palindrome. A palindrome is a string that can be equally read from left to right or right to left, 
+omitting blank spaces, and ignoring capitalization. Examples of palindromes are words like kayak and radar, and phrases like "Never Odd or Even". 
+Fill in the blanks in this function to return True if the passed string is a palindrome, False if not.
+
+Method1:
+
+def is_pallindrome(text):
+    rtext = ''
+    new_text = ''
+    text.strip()
+    text = text.lower()
+    for x in text:
+        if x != " ":
+            new_text = new_text + x
+            rtext = x + rtext
+        else:
+            continue
+    if new_text == rtext:
+        return True
+    else:
+        return False
+
+print(is_pallindrome('Never Odd Or Even'))
+
+
+Method 2:
+
+def is_pallindrome(text):
+    text.strip()
+    text = text.lower()
+    text = text.split()
+    new_text = "".join(text)
+    rtext = new_text[::-1]
+    if rtext == new_text:
+        return True
+    else:
+        return False
+
+print(is_pallindrome('Never Odd Or Even'))
+
+
+
+

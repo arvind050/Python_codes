@@ -1,0 +1,18 @@
+'''The counter function counts down from start to stop when start is bigger than stop, and counts up from start 
+to stop otherwise.'''
+
+def counter(start,stop):
+    if start > stop:
+        for i in range(start,stop-1,-1):
+            print(i,end= " ")
+    else:
+        for i in range(start,stop+1):
+            print(i,end = " ")
+
+counter(5,0)
+print()
+counter(1,10)
+
+'''Output
+5 4 3 2 1 0
+1 2 3 4 5 6 7 8 9 10'''

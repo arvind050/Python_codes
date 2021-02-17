@@ -1,0 +1,35 @@
+'''print the first 10 factorials (from 0 to 9) with the corresponding number. Remember that the factorial of a 
+number is defined as the product of an integer and all integers before it. 
+For example, the factorial of five (5!) is equal to 1*2*3*4*5=120. 
+'''
+
+def factorial(n):
+    fact = 1
+    for i in range (1,n+1):
+        fact = fact * i
+    return fact
+
+for n in range(10):
+    print(n,factorial(n))
+	
+# Method 2 (Recursion function)
+def factorial(n):
+    if n < 2:
+        return 1
+    else:
+        fact = n * factorial(n-1)
+    return fact
+
+
+
+'''Output
+0 1
+1 1
+2 2
+3 6
+4 24
+5 120
+6 720
+7 5040
+8 40320
+9 362880'''
